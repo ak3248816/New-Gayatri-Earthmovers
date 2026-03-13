@@ -1,0 +1,86 @@
+{
+  "Nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "whyUs": "Why Us",
+    "brands": "Brands",
+    "contact": "Contact",
+    "callNow": "Call Now"
+  },
+  "Hero": {
+    "badge": "Trusted Since 21 Years · Pan-India Delivery",
+    "h1": "India's Most Trusted Earthmoving Parts Dealer",
+    "subtitle": "सभी ब्रांड के अर्थमूविंग पार्ट्स — OEM & Aftermarket",
+    "body": "Genuine & aftermarket spare parts for JCB, CAT, Komatsu, Hitachi, Volvo, L&T Case & BEML. Serving contractors, mechanics & dealers across India.",
+    "searchParts": "Search Parts",
+    "whatsappUs": "WhatsApp Us"
+  },
+  "Stats": {
+    "years": "Years in Business",
+    "parts": "Parts in Stock",
+    "customers": "Happy Customers",
+    "brands": "Brands Covered"
+  },
+  "Categories": {
+    "heading": "Parts We Specialize In",
+    "engine": "Engine Parts",
+    "engineDesc": "Pistons, Rings, Bearings, Gaskets",
+    "hydraulic": "Hydraulic Parts",
+    "hydraulicDesc": "Pumps, Cylinders, Motors, Valves",
+    "undercarriage": "Undercarriage Parts",
+    "undercarriageDesc": "Tracks, Rollers, Sprockets, Idlers",
+    "filters": "Filters & Consumables",
+    "filtersDesc": "Air, Oil, Fuel, Hydraulic Filters",
+    "electrical": "Electrical Parts",
+    "electricalDesc": "Batteries, Alternators, Starters, Wiring",
+    "body": "Body & Structural",
+    "bodyDesc": "Buckets, Booms, Arms, Cutting Edges",
+    "transmission": "Transmission Parts",
+    "transmissionDesc": "Gearboxes, Drive Shafts, Clutches",
+    "cooling": "Cooling System",
+    "coolingDesc": "Radiators, Coolant Pumps, Thermostat"
+  },
+  "Brands": {
+    "heading": "Brands We Stock Parts For"
+  },
+  "About": {
+    "heading": "About New Gayatri Earthmovers",
+    "p1": "New Gayatri Earthmovers is a leading supplier of genuine and aftermarket spare parts for all major earthmoving machinery brands. Based in Ghaziabad, UP, we have been serving construction contractors, machine owners, mechanics, and dealers across India for 21+ years.",
+    "p2": "We stock over 10,000+ parts for JCB, CAT, Komatsu, Hitachi, L&T Case, Volvo, and BEML machines — available at competitive prices with bulk and wholesale discounts.",
+    "p3": "Whether you need a single replacement part or a bulk order for your fleet, we deliver fast across all of India."
+  },
+  "WhyUs": {
+    "heading": "Why Choose New Gayatri Earthmovers?",
+    "oem": "OEM & Aftermarket",
+    "oemDesc": "Genuine and compatible parts for all brands",
+    "delivery": "Pan-India Delivery",
+    "deliveryDesc": "Fast shipping to all states across India",
+    "wholesale": "Wholesale Pricing",
+    "wholesaleDesc": "Special bulk rates for dealers & contractors",
+    "experience": "21+ Years Experience",
+    "experienceDesc": "Trusted by thousands of customers since founding",
+    "expert": "Expert Guidance",
+    "expertDesc": "Call us — our team helps you find the right part",
+    "quality": "Quality Assured",
+    "qualityDesc": "Every part checked before dispatch"
+  },
+  "Testimonials": {
+    "heading": "What Our Customers Say"
+  },
+  "Contact": {
+    "heading": "Get In Touch",
+    "name": "Name",
+    "phone": "Phone Number",
+    "brand": "Machine Brand",
+    "part": "Part Name / Description",
+    "message": "Message (Optional)",
+    "send": "Send Inquiry"
+  },
+  "Footer": {
+    "quickLinks": "Quick Links",
+    "categories": "Parts Categories",
+    "contact": "Contact Info",
+    "rights": "Copyright © 2026 New Gayatri Earthmovers · All Rights Reserved"
+  }
+}
