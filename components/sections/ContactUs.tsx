@@ -44,13 +44,13 @@ export function ContactUs() {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
       console.log("Inquiry submitted:", data);
-      
+
       toast({
         title: "Inquiry Sent Successfully",
         description: "Our team will contact you shortly regarding the parts.",
         duration: 5000,
       });
-      
+
       form.reset();
     } catch {
       toast({
@@ -66,7 +66,7 @@ export function ContactUs() {
   return (
     <section id="contact" className="py-24 bg-dark-card border-t border-border relative">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -89,14 +89,14 @@ export function ContactUs() {
           >
             {/* Decorative corner */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -z-0"></div>
-            
+
             <h3 className="text-2xl font-heading font-bold text-white mb-6 relative z-10">Send Inquiry</h3>
-            
+
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-300">{t("name")} *</label>
-                  <Input 
+                  <Input
                     {...form.register("name")}
                     className="bg-dark border-white/10 text-white focus:border-primary focus:ring-primary rounded-xl"
                   />
@@ -104,10 +104,10 @@ export function ContactUs() {
                     <p className="text-primary text-xs mt-1">{form.formState.errors.name.message}</p>
                   )}
                 </div>
-                
+
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-300">{t("phone")} *</label>
-                  <Input 
+                  <Input
                     {...form.register("phone")}
                     type="tel"
                     className="bg-dark border-white/10 text-white focus:border-primary focus:ring-primary rounded-xl"
@@ -121,7 +121,7 @@ export function ContactUs() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-300">{t("brand")} *</label>
-                  <select 
+                  <select
                     {...form.register("brand")}
                     className="flex h-10 w-full rounded-xl border border-white/10 bg-dark px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary disabled:cursor-not-allowed disabled:opacity-50"
                   >
@@ -139,10 +139,10 @@ export function ContactUs() {
                     <p className="text-primary text-xs mt-1">{form.formState.errors.brand.message}</p>
                   )}
                 </div>
-                
+
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-300">{t("part")} *</label>
-                  <Input 
+                  <Input
                     {...form.register("part")}
                     placeholder="e.g. Hydraulic Pump"
                     className="bg-dark border-white/10 text-white placeholder:text-gray-600 focus:border-primary focus:ring-primary rounded-xl"
@@ -155,15 +155,15 @@ export function ContactUs() {
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-300">{t("message")}</label>
-                <Textarea 
+                <Textarea
                   {...form.register("message")}
                   rows={4}
                   className="bg-dark border-white/10 text-white focus:border-primary focus:ring-primary rounded-xl resize-none"
                 />
               </div>
 
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 disabled={isSubmitting}
                 className="w-full h-14 bg-primary hover:bg-primary-dark text-black font-heading font-bold text-lg rounded-xl transition-all"
               >
@@ -241,21 +241,20 @@ export function ContactUs() {
                 </div>
                 <div>
                   <h4 className="text-white font-heading font-bold text-xl mb-2">Working Hours</h4>
-                  <p className="text-gray-400 font-medium">Mon–Sat: 9:00 AM – 7:00 PM</p>
-                  <p className="text-gray-500 text-sm mt-1">Sunday Closed</p>
+                  <p className="text-gray-400 font-medium">All Days: 9:00 AM – 7:00 PM</p>
                 </div>
               </div>
             </div>
 
             {/* Map Placeholder */}
             <div className="w-full h-48 md:h-64 rounded-3xl overflow-hidden border border-white/10 relative group">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14620.32356877227!2d85.51357062402244!3d24.45030272023594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f60cb0c0000001%3A0x6bba3bc30a91e0a2!2sAsnabad%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1715421234567!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }} 
-                allowFullScreen={true} 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14620.32356877227!2d85.51357062402244!3d24.45030272023594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f60cb0c0000001%3A0x6bba3bc30a91e0a2!2sAsnabad%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1715421234567!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+                allowFullScreen={true}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0 z-0 opacity-80 group-hover:opacity-100 transition-opacity"
               ></iframe>
