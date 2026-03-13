@@ -37,18 +37,26 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-black text-white">
-      {/* Background Pattern Overlay */}
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="gear-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-              <path fill="currentColor" d="M49.5 25A24.5 24.5 0 1 0 74 49.5 24.5 24.5 0 0 0 49.5 25zM49.5 64A14.5 14.5 0 1 1 64 49.5 14.5 14.5 0 0 1 49.5 64z"/>
-              <path fill="currentColor" d="M54.7 15.6l-2-6.2a34.7 34.7 0 0 0-6.4 0l-2 6.2a27 27 0 0 0-5.8 2.4l-5.4-3.7a34.7 34.7 0 0 0-4.5 4.5l3.7 5.4a27 27 0 0 0-2.4 5.8l-6.2 2a34.7 34.7 0 0 0 0 6.4l6.2 2a27 27 0 0 0 2.4 5.8l-3.7 5.4a34.7 34.7 0 0 0 4.5 4.5l5.4-3.7a27 27 0 0 0 5.8 2.4l2 6.2a34.7 34.7 0 0 0 6.4 0l2-6.2a27 27 0 0 0 5.8-2.4l5.4 3.7a34.7 34.7 0 0 0 4.5-4.5l-3.7-5.4a27 27 0 0 0 2.4-5.8l6.2-2a34.7 34.7 0 0 0 0-6.4l-6.2-2a27 27 0 0 0-2.4-5.8l3.7-5.4a34.7 34.7 0 0 0-4.5-4.5l-5.4 3.7A27 27 0 0 0 54.7 15.6zM49.5 59A9.5 9.5 0 1 1 59 49.5 9.5 9.5 0 0 1 49.5 59z"/>
-            </pattern>
-          </defs>
-          <rect x="0" y="0" width="100%" height="100%" fill="url(#gear-pattern)" />
-        </svg>
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+      {/* Background - Realistic Earthmoving Machine Images */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {/* Excavator - top left */}
+        <div className="absolute top-[3%] left-[1%] w-[25%] max-w-[320px] opacity-55">
+          <img src="/machines/excavator.png" alt="" className="w-full h-auto" loading="eager" />
+        </div>
+        {/* JCB 3DX - top right */}
+        <div className="absolute top-[3%] right-[1%] w-[25%] max-w-[320px] opacity-55">
+          <img src="/machines/jcb-3dx.png" alt="" className="w-full h-auto" loading="eager" />
+        </div>
+        {/* Bulldozer - bottom left */}
+        <div className="absolute bottom-[8%] left-[1%] w-[25%] max-w-[320px] opacity-55">
+          <img src="/machines/bulldozer.png" alt="" className="w-full h-auto" loading="eager" />
+        </div>
+        {/* Wheel Loader - bottom right */}
+        <div className="absolute bottom-[8%] right-[1%] w-[25%] max-w-[320px] opacity-55">
+          <img src="/machines/wheel-loader.png" alt="" className="w-full h-auto" loading="eager" />
+        </div>
+        {/* Gradient overlay to blend into black */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70" />
       </div>
 
       <div className="container relative z-10 px-4 mx-auto text-center flex flex-col items-center max-w-5xl">
