@@ -89,14 +89,6 @@ export function Hero() {
             ))}
           </motion.h1>
 
-          {/* Subtitle */}
-          <motion.h2 
-            variants={itemVariants} 
-            className="text-xl md:text-3xl font-hindi text-gray-300 font-medium mb-6"
-          >
-            {t("subtitle")}
-          </motion.h2>
-
           {/* Body */}
           <motion.p 
             variants={itemVariants}
