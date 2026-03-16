@@ -85,12 +85,12 @@ export function StatsBar() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col items-center justify-center p-4 rounded-2xl hover:bg-white/5 transition-colors group"
+                className="flex flex-col items-center justify-center p-2 sm:p-4 rounded-2xl hover:bg-white/5 transition-colors group"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-black transition-all duration-300">
-                  <Icon className="w-6 h-6" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 sm:mb-4 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-black transition-all duration-300">
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-2 flex items-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-1 sm:mb-2 flex items-center">
                   <Counter from={0} to={stat.value} duration={2.5} />
                   <span className="text-primary">{stat.suffix}</span>
                 </div>

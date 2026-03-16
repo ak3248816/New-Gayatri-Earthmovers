@@ -70,7 +70,7 @@ export function Testimonials() {
               Trusted Excellence
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide">
             {t("heading")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full" />
@@ -81,7 +81,7 @@ export function Testimonials() {
            whileInView={{ opacity: 1 }}
            viewport={{ once: true }}
            transition={{ duration: 0.8, delay: 0.2 }}
-           className="max-w-5xl mx-auto px-4 sm:px-12"
+           className="max-w-5xl mx-auto px-2 sm:px-4 md:px-12"
         >
           <Carousel
             plugins={[plugin.current]}
@@ -96,7 +96,7 @@ export function Testimonials() {
             <CarouselContent className="-ml-4 sm:-ml-6">
               {testimonials.map((testimonial) => (
                 <CarouselItem key={testimonial.id} className="pl-4 sm:pl-6 md:basis-1/2 lg:basis-1/2">
-                  <div className="h-full bg-dark rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-colors relative group">
+                  <div className="h-full bg-dark rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-primary/50 transition-colors relative group">
                     <Quote className="absolute top-6 right-6 w-12 h-12 text-white/5 group-hover:text-primary/10 transition-colors" />
                     
                     <div className="flex gap-1 mb-6">
@@ -105,11 +105,11 @@ export function Testimonials() {
                       ))}
                     </div>
                     
-                    <p className="text-lg text-gray-300 italic mb-8 relative z-10 font-sans min-h-[120px]">
+                    <p className="text-base sm:text-lg text-gray-300 italic mb-6 sm:mb-8 relative z-10 font-sans min-h-0 sm:min-h-[120px]">
                       &quot;{testimonial.quote}&quot;
                     </p>
                     
-                    <div className="flex items-center justify-between border-t border-white/10 pt-6 mt-auto">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 border-t border-white/10 pt-4 sm:pt-6 mt-auto">
                       <div>
                         <h4 className="text-white font-heading font-bold text-lg">{testimonial.name}</h4>
                         <p className="text-primary text-sm font-medium">{testimonial.role}</p>

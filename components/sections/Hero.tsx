@@ -36,9 +36,9 @@ export function Hero() {
   const headlineWords = t("h1").split(" ");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-black text-white">
+    <section className="relative min-h-screen flex items-center justify-center pt-16 pb-16 sm:pt-20 sm:pb-0 overflow-hidden bg-black text-white">
       {/* Background - Realistic Earthmoving Machine Images */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+      <div className="absolute inset-0 z-0 pointer-events-none hidden sm:block">
         {/* Excavator - top left */}
         <div className="absolute top-[3%] left-[1%] w-[25%] max-w-[320px] opacity-55">
           <img src="/machines/excavator.png" alt="" className="w-full h-auto" loading="eager" />
@@ -67,22 +67,22 @@ export function Hero() {
           className="flex flex-col items-center"
         >
           {/* Badge */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <Badge variant="outline" className="text-primary border-primary/50 bg-primary/10 hover:bg-primary/20 transition-colors px-4 py-1.5 text-sm md:text-base font-medium rounded-full">
+          <motion.div variants={itemVariants} className="mb-4 sm:mb-8">
+            <Badge variant="outline" className="text-primary border-primary/50 bg-primary/10 hover:bg-primary/20 transition-colors px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm md:text-base font-medium rounded-full">
               {t("badge")}
             </Badge>
           </motion.div>
 
           {/* Headline - Word by Word Stagger */}
           <motion.h1 
-            className="text-5xl md:text-7xl lg:text-hero font-heading font-bold leading-tight mb-6 text-balance"
+            className="text-3xl sm:text-5xl md:text-7xl lg:text-hero font-heading font-bold leading-tight mb-4 sm:mb-6 text-balance px-2 sm:px-0"
             variants={containerVariants}
           >
             {headlineWords.map((word, index) => (
               <motion.span
                 key={index}
                 variants={wordVariants}
-                className={`inline-block mr-3 ${index > 2 ? 'text-primary' : 'text-white'}`}
+                className={`inline-block mr-1.5 sm:mr-3 ${index > 2 ? 'text-primary' : 'text-white'}`}
               >
                 {word}
               </motion.span>
@@ -92,20 +92,20 @@ export function Hero() {
           {/* Body */}
           <motion.p 
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-400 max-w-3xl mb-10 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mb-6 sm:mb-10 leading-relaxed px-2 sm:px-0"
           >
             {t("body")}
           </motion.p>
 
           {/* CTAs */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary-dark font-bold font-heading text-lg h-14 px-8 rounded-full">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary-dark font-bold font-heading text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 rounded-full">
               <Link href="/catalog">
                 <Search className="mr-2 h-5 w-5" />
                 {t("searchParts")}
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/20 hover:bg-white/10 text-white font-bold font-heading text-lg h-14 px-8 rounded-full">
+            <Button asChild size="lg" variant="outline" className="border-white/20 hover:bg-white/10 text-white font-bold font-heading text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 rounded-full">
               <a href="https://wa.me/919430192911?text=Hello%2C%20I%20want%20to%20inquire%20about%20earthmoving%20spare%20parts." target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5 text-green-500" />
                 {t("whatsappUs")}
@@ -122,13 +122,13 @@ export function Hero() {
         transition={{ delay: 1.5, duration: 0.6, ease: "easeOut" }}
         className="absolute bottom-0 left-0 w-full bg-primary/10 border-t border-primary/20 backdrop-blur-md"
       >
-        <div className="container mx-auto px-4 py-3 flex flex-wrap justify-center items-center gap-4 text-sm md:text-base font-medium font-heading">
-          <PhoneCall className="h-4 w-4 text-primary" />
-          <span className="text-gray-300">+91 9430192911</span>
+        <div className="container mx-auto px-4 py-2 sm:py-3 flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-xs sm:text-sm md:text-base font-medium font-heading">
+          <PhoneCall className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+          <a href="tel:+919430192911" className="text-gray-300 hover:text-primary transition-colors">+91 9430192911</a>
           <span className="text-primary hidden sm:inline">|</span>
-          <span className="text-gray-300">+91 9939563050</span>
+          <a href="tel:+919939563050" className="text-gray-300 hover:text-primary transition-colors">+91 9939563050</a>
           <span className="text-primary hidden sm:inline">|</span>
-          <span className="text-gray-300">+91 7004525378</span>
+          <a href="tel:+917004525378" className="text-gray-300 hover:text-primary transition-colors">+91 7004525378</a>
         </div>
       </motion.div>
     </section>

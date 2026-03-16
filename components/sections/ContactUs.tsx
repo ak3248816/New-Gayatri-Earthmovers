@@ -72,7 +72,7 @@ export function ContactUs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide">
             {t("heading")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full" />
@@ -85,7 +85,7 @@ export function ContactUs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-black p-8 md:p-10 rounded-3xl border border-white/5 shadow-xl relative overflow-hidden"
+            className="bg-black p-6 sm:p-8 md:p-10 rounded-3xl border border-white/5 shadow-xl relative overflow-hidden"
           >
             {/* Decorative corner */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -z-0"></div>
@@ -247,7 +247,7 @@ export function ContactUs() {
             </div>
 
             {/* Map Placeholder */}
-            <div className="w-full h-48 md:h-64 rounded-3xl overflow-hidden border border-white/10 relative group">
+            <div className="w-full h-48 sm:h-48 md:h-64 rounded-3xl overflow-hidden border border-white/10 relative group">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14620.32356877227!2d85.51357062402244!3d24.45030272023594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f60cb0c0000001%3A0x6bba3bc30a91e0a2!2sAsnabad%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1715421234567!5m2!1sen!2sin"
                 width="100%"
@@ -258,9 +258,9 @@ export function ContactUs() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0 z-0 opacity-80 group-hover:opacity-100 transition-opacity"
               ></iframe>
-              <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2 z-10 pointer-events-none">
-                <MapPin className="text-primary w-4 h-4" />
-                <span className="text-white text-sm font-medium">Near Asnabad Petrol Pump, Jhumri Telaiya, Koderma</span>
+              <div className="absolute top-4 left-4 right-4 sm:right-auto bg-black/80 backdrop-blur-md px-3 sm:px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2 z-10 pointer-events-none">
+                <MapPin className="text-primary w-4 h-4 shrink-0" />
+                <span className="text-white text-xs sm:text-sm font-medium truncate">Near Asnabad Petrol Pump, Jhumri Telaiya</span>
               </div>
             </div>
           </motion.div>

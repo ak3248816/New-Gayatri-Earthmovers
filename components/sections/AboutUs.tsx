@@ -37,7 +37,7 @@ export function AboutUs() {
           >
             <div className="inline-flex items-center space-x-2">
               <div className="w-12 h-1 bg-primary rounded-full"></div>
-              <h2 className="text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide">
                 {t("heading")}
               </h2>
             </div>
@@ -54,7 +54,7 @@ export function AboutUs() {
               </p>
             </div>
 
-            <div className="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="pt-6 grid grid-cols-2 gap-4">
               {highlights.map((item, index) => {
                 const Icon = item.icon;
                 return (
@@ -75,7 +75,7 @@ export function AboutUs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-full min-h-[400px] lg:min-h-[600px] rounded-3xl overflow-hidden"
+            className="relative h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[600px] rounded-3xl overflow-hidden"
           >
             {/* Abstract Graphic representing machinery/parts since we don't have a real image */}
             <div className="absolute inset-0 bg-dark-card border border-white/10 rounded-3xl overflow-hidden flex items-center justify-center group">

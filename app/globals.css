@@ -93,6 +93,17 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Ensure tappable elements have proper sizing */
+  a, button {
+    touch-action: manipulation;
   }
   
   /* Scrollbar Styling */

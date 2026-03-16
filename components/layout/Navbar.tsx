@@ -50,7 +50,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="font-heading font-bold text-2xl tracking-wider">
+          <div className="font-heading font-bold text-lg sm:text-2xl tracking-wider">
             <span className="text-white">NEW GAYATRI</span>
             <span className="text-primary ml-2 group-hover:text-primary-dark transition-colors">
               EARTHMOVERS
@@ -73,7 +73,7 @@ export function Navbar() {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <button
             onClick={switchLocale}
             className="flex items-center gap-1.5 text-sm font-medium text-white hover:text-primary transition-colors"

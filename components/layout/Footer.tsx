@@ -21,7 +21,7 @@ export function Footer() {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 transform origin-top-right mix-blend-screen pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-16">
           
           {/* Brand Column */}
           <div className="space-y-6">
@@ -107,7 +107,7 @@ export function Footer() {
         </div>
 
         {/* Copyright Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col items-center justify-center gap-4 text-center">
           <p className="text-gray-500 text-sm font-medium text-center md:text-left">
             {t("rights")}
           </p>
