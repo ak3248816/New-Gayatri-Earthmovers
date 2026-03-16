@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ShieldCheck, Truck, PackageCheck } from "lucide-react";
+import { ShieldCheck, PackageCheck } from "lucide-react";
 
 export function AboutUs() {
   const t = useTranslations("About");
@@ -12,10 +12,7 @@ export function AboutUs() {
       icon: ShieldCheck,
       text: "Genuine OEM Parts",
     },
-    {
-      icon: Truck,
-      text: "Fast Pan-India Delivery",
-    },
+
     {
       icon: PackageCheck,
       text: "Wholesale & Bulk Orders",

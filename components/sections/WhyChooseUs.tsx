@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { 
   Settings2, 
-  MapPin, 
   Banknote, 
   Award, 
   Headset, 
@@ -21,12 +20,7 @@ export function WhyChooseUs() {
       description: t("oemDesc"),
       icon: Settings2,
     },
-    {
-      id: "delivery",
-      title: t("delivery"),
-      description: t("deliveryDesc"),
-      icon: MapPin,
-    },
+
     {
       id: "wholesale",
       title: t("wholesale"),

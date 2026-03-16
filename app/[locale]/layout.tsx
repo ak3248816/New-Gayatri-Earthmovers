@@ -29,7 +29,7 @@ const notoSans = Noto_Sans_Devanagari({
 export const metadata: Metadata = {
   title: "New Gayatri Earthmovers | Earthmoving Spare Parts Dealer",
   description:
-    "Genuine & aftermarket spare parts for JCB, CAT, Komatsu, Hitachi, Volvo, L&T Case & BEML. Pan-India delivery. Call +91 9430192911.",
+    "Genuine & aftermarket spare parts for JCB, CAT, Komatsu, Hitachi, Volvo, L&T Case & BEML. Call +91 9430192911.",
   keywords:
     "JCB parts, earthmoving spare parts, CAT parts, Komatsu parts, excavator parts dealer, Ghaziabad",
   openGraph: {

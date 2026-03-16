@@ -9,7 +9,7 @@
     "callNow": "Call Now"
   },
   "Hero": {
-    "badge": "Trusted Since 21 Years · Pan-India Delivery",
+    "badge": "Trusted Since 21 Years",
     "h1": "Jharkhand's Most Trusted Earthmoving Parts Dealer",
     "body": "Genuine & aftermarket spare parts for JCB, CAT, Komatsu, Hitachi, Volvo, L&T .",
     "searchParts": "Search Parts",
@@ -53,8 +53,7 @@
     "heading": "Why Choose New Gayatri Earthmovers?",
     "oem": "OEM & Aftermarket",
     "oemDesc": "Genuine and compatible parts for all brands",
-    "delivery": "Pan-India Delivery",
-    "deliveryDesc": "Fast shipping to all states across India",
+
     "wholesale": "Wholesale Pricing",
     "wholesaleDesc": "Special bulk rates for dealers & contractors",
     "experience": "21+ Years Experience",
