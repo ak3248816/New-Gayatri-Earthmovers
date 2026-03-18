@@ -30,12 +30,12 @@ export function PartCard({ part }: PartCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -4, borderColor: "#F5C400" }}
-      className="bg-dark-card rounded-2xl border border-white/10 overflow-hidden group flex flex-col h-full transition-all duration-300 relative"
+      className="bg-card rounded-2xl border border-border overflow-hidden group flex flex-col h-full transition-all duration-300 relative shadow-sm"
     >
       {/* Type badge (OEM / Aftermarket) */}
       <div className="absolute top-4 right-4 z-10">
         <span className={`text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${
-          part.type === 'OEM' ? 'bg-primary/20 text-primary border border-primary/30' : 'bg-white/10 text-gray-300 border border-white/20'
+          part.type === 'OEM' ? 'bg-primary/20 text-primary-dark border border-primary/30' : 'bg-secondary text-muted-foreground border border-border'
         }`}>
           {part.type}
         </span>
@@ -43,34 +43,34 @@ export function PartCard({ part }: PartCardProps) {
 
       <div className="p-6 flex-grow flex flex-col">
         {/* Placeholder Image/Icon */}
-        <div className="w-full h-40 bg-black/50 rounded-xl border border-white/5 mb-6 flex items-center justify-center group-hover:bg-black/70 transition-colors">
-          <Wrench className="w-12 h-12 text-white/20 group-hover:text-primary/40 transition-colors" />
+        <div className="w-full h-40 bg-secondary/50 rounded-xl border border-border mb-6 flex items-center justify-center group-hover:bg-secondary transition-colors">
+          <Wrench className="w-12 h-12 text-muted-foreground/30 group-hover:text-primary transition-colors" />
         </div>
 
         {/* Content */}
         <div className="mb-2">
-          <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">{part.category}</span>
+          <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">{part.category}</span>
         </div>
         
-        <h3 className="text-xl font-heading font-bold text-white mb-1 group-hover:text-primary transition-colors line-clamp-2">
+        <h3 className="text-xl font-heading font-bold text-foreground mb-1 group-hover:text-primary-dark transition-colors line-clamp-2">
           {part.name}
         </h3>
         
         <div className="flex items-center gap-2 mb-4">
-          <Package className="w-4 h-4 text-gray-500" />
-          <span className="text-sm font-mono text-gray-400 font-medium bg-black/50 px-2 py-0.5 rounded">
+          <Package className="w-4 h-4 text-muted-foreground" />
+          <span className="text-sm font-mono text-muted-foreground font-medium bg-secondary px-2 py-0.5 rounded border border-border">
             Part #: {part.partNumber}
           </span>
         </div>
         
-        <p className="text-sm text-gray-400 mb-6 line-clamp-2 flex-grow">
+        <p className="text-sm text-muted-foreground mb-6 line-clamp-2 flex-grow">
           {part.description}
         </p>
 
         {/* Brands Tags */}
         <div className="flex flex-wrap gap-2 mb-6">
           {part.brands.map(brand => (
-            <span key={brand} className="text-xs bg-white/5 text-gray-300 border border-white/10 px-2.5 py-1 rounded-full whitespace-nowrap">
+            <span key={brand} className="text-xs bg-secondary text-muted-foreground border border-border px-2.5 py-1 rounded-full whitespace-nowrap">
               {brand}
             </span>
           ))}
@@ -79,7 +79,7 @@ export function PartCard({ part }: PartCardProps) {
         {/* CTA */}
         <Button 
           onClick={handleInquire}
-          className="w-full bg-white/10 hover:bg-primary text-white hover:text-black font-heading font-bold transition-all duration-300 border border-white/5 hover:border-primary mt-auto"
+          className="w-full bg-secondary hover:bg-primary text-foreground hover:text-primary-foreground font-heading font-bold transition-all duration-300 border border-border hover:border-primary mt-auto"
         >
           <ShieldCheck className="w-4 h-4 mr-2" />
           Inquire on WhatsApp
