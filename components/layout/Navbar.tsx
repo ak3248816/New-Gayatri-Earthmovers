@@ -41,15 +41,14 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border py-3 shadow-sm"
-          : "bg-transparent py-5"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/90 backdrop-blur-md border-b border-border py-3 shadow-sm"
+        : "bg-transparent py-5"
+        }`}
     >
       <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-1 md:gap-3 group">
           {/* GE Dual-Tone Hexagon Logo */}
           <div className="relative flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-500">
             <svg width="46" height="46" viewBox="0 0 100 100" className="drop-shadow-sm flex-shrink-0" xmlns="http://www.w3.org/2000/svg">
@@ -60,21 +59,23 @@ export function Navbar() {
                 </linearGradient>
               </defs>
               {/* Right Half (Yellow) */}
-              <polygon points="50,5 90,27.5 90,72.5 50,95 50,5" fill="url(#geGrad)"/>
+              <polygon points="50,5 90,27.5 90,72.5 50,95 50,5" fill="url(#geGrad)" />
               {/* Left Half (Black) */}
-              <polygon points="50,5 50,95 10,72.5 10,27.5 50,5" fill="#111111"/>
-              
+              <polygon points="50,5 50,95 10,72.5 10,27.5 50,5" fill="#111111" />
+
               {/* Letters */}
               <text x="32" y="55" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="38" fill="#FFFFFF" textAnchor="middle" dominantBaseline="middle">G</text>
               <text x="68" y="55" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="38" fill="#111111" textAnchor="middle" dominantBaseline="middle">E</text>
             </svg>
           </div>
-          <div className="font-heading font-bold text-lg sm:text-2xl tracking-wider hidden sm:block md:hidden lg:block">
-            <span className="text-foreground transition-colors group-hover:text-primary-dark">NEW GAYATRI</span>
-            <span className="text-primary ml-2 transition-colors">
+          <div className="flex flex-row gap-1 md:gap-2">
+            <span className="font-heading font-bold text-[16px] md:text-2xl md:tracking-wider">
+              NEW GAYATRI
+            </span>
+            <span className="font-heading font-bold text-[16px] md:text-2xl md:tracking-wider text-primary transition-colors">
               EARTHMOVERS
             </span>
-          </div>
+            </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -93,14 +94,6 @@ export function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-2 sm:gap-4">
-          <button
-            onClick={switchLocale}
-            className="flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-primary transition-colors"
-          >
-            <Globe className="w-4 h-4" />
-            <span>{locale === "en" ? "HI" : "EN"}</span>
-          </button>
-
           <Button className="hidden sm:flex bg-primary text-primary-foreground hover:bg-primary-dark font-bold font-heading">
             <Phone className="w-4 h-4 mr-2" />
             {t("callNow")}
