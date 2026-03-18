@@ -41,20 +41,39 @@ export function ContactUs() {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("Inquiry submitted:", data);
+      // Post to API route (logs the enquiry server-side)
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      // Build a pre-filled WhatsApp message with all enquiry details
+      const waText = [
+        `*New Spare Parts Enquiry*`,
+        ``,
+        `*Name:* ${data.name}`,
+        `*Phone:* ${data.phone}`,
+        `*Brand:* ${data.brand}`,
+        `*Part Required:* ${data.part}`,
+        data.message ? `*Additional Info:* ${data.message}` : "",
+      ]
+        .filter(Boolean)
+        .join("\n");
+
+      const waUrl = `https://wa.me/919430192911?text=${encodeURIComponent(waText)}`;
+      window.open(waUrl, "_blank", "noopener,noreferrer");
 
       toast({
-        title: "Inquiry Sent Successfully",
-        description: "Our team will contact you shortly regarding the parts.",
-        duration: 5000,
+        title: "Enquiry Sent!",
+        description: "WhatsApp has opened with your enquiry details. Our team will respond shortly.",
+        duration: 6000,
       });
 
       form.reset();
     } catch {
       toast({
-        title: "Error Sending Inquiry",
+        title: "Error Sending Enquiry",
         description: "Please try again or contact us directly via WhatsApp.",
         variant: "destructive",
       });
@@ -90,7 +109,7 @@ export function ContactUs() {
             {/* Decorative corner */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -z-0"></div>
 
-            <h3 className="text-2xl font-heading font-bold text-foreground mb-6 relative z-10">Send Inquiry</h3>
+            <h3 className="text-2xl font-heading font-bold text-foreground mb-6 relative z-10">Send Enquiry</h3>
 
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
