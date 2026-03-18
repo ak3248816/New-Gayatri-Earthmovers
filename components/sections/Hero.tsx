@@ -3,10 +3,9 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Search, MessageCircle, PhoneCall } from "lucide-react";
+import { MessageCircle, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
 
 export function Hero() {
   const t = useTranslations("Hero");
@@ -126,12 +125,6 @@ export function Hero() {
 
           {/* CTAs */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary-dark font-bold font-heading text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 rounded-full">
-              <Link href="/catalog">
-                <Search className="mr-2 h-5 w-5" />
-                {t("searchParts")}
-              </Link>
-            </Button>
             <Button asChild size="lg" variant="outline" className="border-border hover:bg-secondary text-foreground font-bold font-heading text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 rounded-full">
               <a href="https://wa.me/919430192911?text=Hello%2C%20I%20want%20to%20inquire%20about%20earthmoving%20spare%20parts." target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5 text-green-500" />
