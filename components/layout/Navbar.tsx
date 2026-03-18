@@ -87,9 +87,11 @@ export function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-2 sm:gap-4">
-          <Button className="hidden sm:flex bg-primary text-primary-foreground hover:bg-primary-dark font-bold font-heading">
-            <Phone className="w-4 h-4 mr-2" />
-            {t("callNow")}
+          <Button asChild className="hidden sm:flex bg-primary text-primary-foreground hover:bg-primary-dark font-bold font-heading">
+            <a href="tel:+919430192911">
+              <Phone className="w-4 h-4 mr-2" />
+              {t("callNow")}
+            </a>
           </Button>
 
           {/* Mobile Menu */}
@@ -111,9 +113,11 @@ export function Navbar() {
                     {link.name}
                   </Link>
                 ))}
-                <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary-dark font-bold font-heading text-lg">
-                  <Phone className="w-5 h-5 mr-2" />
-                  {t("callNow")}
+                <Button asChild className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary-dark font-bold font-heading text-lg">
+                  <a href="tel:+919430192911">
+                    <Phone className="w-5 h-5 mr-2" />
+                    {t("callNow")}
+                  </a>
                 </Button>
               </nav>
             </SheetContent>
