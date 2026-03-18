@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
-import { Menu, Phone, Globe } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import {
   Sheet,
   SheetContent,
