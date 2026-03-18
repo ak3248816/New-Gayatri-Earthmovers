@@ -16,9 +16,9 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-black pt-12 sm:pt-16 pb-24 sm:pb-8 border-t-[4px] border-primary relative overflow-hidden">
+    <footer className="bg-background pt-12 sm:pt-16 pb-24 sm:pb-8 border-t-[4px] border-primary relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 transform origin-top-right mix-blend-screen pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/10 -skew-x-12 transform origin-top-right mix-blend-multiply pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-16">
@@ -27,18 +27,18 @@ export function Footer() {
           <div className="space-y-4 sm:space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
             <Link href="/" className="inline-block">
               <div className="font-heading font-bold text-2xl tracking-wider">
-                <span className="text-white">NEW GAYATRI</span>
+                <span className="text-foreground">NEW GAYATRI</span>
                 <span className="text-primary block mt-1">EARTHMOVERS</span>
               </div>
             </Link>
-            <p className="text-gray-400 font-medium text-sm leading-relaxed">
+            <p className="text-muted-foreground font-medium text-sm leading-relaxed">
               India&apos;s most trusted dealer for genuine and aftermarket earthmoving spare parts. Delivering quality since 21+ years.
             </p>
           </div>
 
           {/* Quick Links Column */}
           <div className="space-y-4 sm:space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
-            <h4 className="text-white font-heading font-bold text-lg uppercase tracking-wide">
+            <h4 className="text-foreground font-heading font-bold text-lg uppercase tracking-wide">
               {t("quickLinks")}
             </h4>
             <ul className="space-y-3">
@@ -49,7 +49,7 @@ export function Footer() {
                 { name: "Contact Us", href: "/#contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-primary transition-colors text-sm font-medium">
+                  <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">
                     {link.name}
                   </Link>
                 </li>
@@ -59,19 +59,19 @@ export function Footer() {
 
           {/* Categories Column */}
           <div className="space-y-4 sm:space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
-            <h4 className="text-white font-heading font-bold text-lg uppercase tracking-wide">
+            <h4 className="text-foreground font-heading font-bold text-lg uppercase tracking-wide">
               {t("categories")}
             </h4>
             <ul className="space-y-3">
               {categories.map((category) => (
                 <li key={category}>
-                  <Link href={`/catalog?category=${encodeURIComponent(category)}`} className="text-gray-400 hover:text-primary transition-colors text-sm font-medium">
+                  <Link href={`/catalog?category=${encodeURIComponent(category)}`} className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">
                     {category}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/catalog" className="text-primary hover:text-white transition-colors text-sm font-bold">
+                <Link href="/catalog" className="text-primary hover:text-primary-dark transition-colors text-sm font-bold">
                   View All Parts &rarr;
                 </Link>
               </li>
@@ -80,24 +80,24 @@ export function Footer() {
 
           {/* Contact Column */}
           <div className="space-y-4 sm:space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
-            <h4 className="text-white font-heading font-bold text-lg uppercase tracking-wide">
+            <h4 className="text-foreground font-heading font-bold text-lg uppercase tracking-wide">
               {t("contact")}
             </h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-gray-400 font-medium">
+              <li className="flex items-start gap-3 text-sm text-muted-foreground font-medium">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
                 <div className="flex flex-col gap-1">
                   <a href="tel:+919430192911" className="hover:text-primary transition-colors">+91 9430192911</a>
                   <a href="tel:+919939563050" className="hover:text-primary transition-colors">+91 9939563050</a>
                 </div>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-400 font-medium">
+              <li className="flex items-start gap-3 text-sm text-muted-foreground font-medium">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
                 <a href="mailto:ak3248816@gmail.com" className="hover:text-primary transition-colors break-all">
                   ak3248816@gmail.com
                 </a>
               </li>
-              <li className="flex items-start justify-center sm:justify-start gap-3 text-sm text-gray-400 font-medium w-full">
+              <li className="flex items-start justify-center sm:justify-start gap-3 text-sm text-muted-foreground font-medium w-full">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-left w-full sm:w-auto">Near Asnabad Petrol Pump,<br/>Jhumri Telaiya, Koderma,<br/>Jharkhand</span>
               </li>
@@ -107,7 +107,7 @@ export function Footer() {
         </div>
 
         {/* Copyright Bar */}
-        <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col items-center justify-center gap-4 text-center">
+        <div className="border-t border-border pt-6 sm:pt-8 flex flex-col items-center justify-center gap-4 text-center">
           <p className="text-gray-500 text-sm font-medium text-center md:text-left">
             {t("rights")}
           </p>

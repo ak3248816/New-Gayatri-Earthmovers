@@ -70,7 +70,7 @@ export function WhyChooseUs() {
   };
 
   return (
-    <section id="why-us" className="py-12 sm:py-16 md:py-24 bg-dark relative border-t border-white/5">
+    <section id="why-us" className="py-12 sm:py-16 md:py-24 bg-background relative border-t border-border">
       {/* Subtle Glow Overlay */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
 
@@ -87,7 +87,7 @@ export function WhyChooseUs() {
               Our Advantages
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-foreground uppercase tracking-wide">
             {t("heading")}
           </h2>
         </motion.div>
@@ -105,7 +105,7 @@ export function WhyChooseUs() {
               <motion.div
                 key={feature.id}
                 variants={cardVariants}
-                className="group p-6 sm:p-8 rounded-2xl bg-black border border-white/5 hover:border-primary/50 transition-all duration-300 relative overflow-hidden flex flex-col items-center text-center"
+                className="group p-6 sm:p-8 rounded-2xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col items-center text-center"
               >
                 {/* Top border accent line */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/0 to-transparent group-hover:via-primary transition-all duration-500"></div>
@@ -113,15 +113,15 @@ export function WhyChooseUs() {
                 {/* Background glow on hover */}
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
 
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-dark-card border border-white/10 flex items-center justify-center mb-4 sm:mb-6 relative z-10 group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
-                  <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-primary group-hover:text-black transition-colors" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-secondary border border-border flex items-center justify-center mb-4 sm:mb-6 relative z-10 group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                  <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-primary-dark group-hover:text-primary-foreground transition-colors" />
                 </div>
                 
-                <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-2 sm:mb-3 relative z-10 group-hover:text-primary transition-colors">
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-2 sm:mb-3 relative z-10 group-hover:text-primary-dark transition-colors">
                   {feature.title}
                 </h3>
                 
-                <p className="text-gray-400 font-medium leading-relaxed relative z-10">
+                <p className="text-muted-foreground font-medium leading-relaxed relative z-10">
                   {feature.description}
                 </p>
               </motion.div>

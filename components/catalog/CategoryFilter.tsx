@@ -10,8 +10,8 @@ interface CategoryFilterProps {
 
 export function CategoryFilter({ currentCategory, onCategorySelect, availableCategories }: CategoryFilterProps) {
   return (
-    <div className="bg-dark rounded-2xl border border-white/10 p-6 sticky top-24">
-      <h3 className="text-white font-heading font-bold text-lg uppercase tracking-wider mb-6 pb-4 border-b border-white/10">
+    <div className="bg-card rounded-2xl border border-border p-6 sticky top-24 shadow-sm">
+      <h3 className="text-foreground font-heading font-bold text-lg uppercase tracking-wider mb-6 pb-4 border-b border-border">
         Categories
       </h3>
       
@@ -22,8 +22,8 @@ export function CategoryFilter({ currentCategory, onCategorySelect, availableCat
             className={cn(
               "w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-between group",
               currentCategory === null 
-                ? "bg-primary/10 text-primary border border-primary/20" 
-                : "text-gray-400 hover:text-white hover:bg-white/5 border border-transparent"
+                ? "bg-primary/10 text-primary-dark border border-primary/20" 
+                : "text-muted-foreground hover:text-foreground hover:bg-secondary border border-transparent"
             )}
           >
             All Categories
@@ -38,8 +38,8 @@ export function CategoryFilter({ currentCategory, onCategorySelect, availableCat
               className={cn(
                 "w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-between group",
                 currentCategory === category 
-                  ? "bg-primary/10 text-primary border border-primary/20" 
-                  : "text-gray-400 hover:text-white hover:bg-white/5 border border-transparent"
+                  ? "bg-primary/10 text-primary-dark border border-primary/20" 
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary border border-transparent"
               )}
             >
               {category}

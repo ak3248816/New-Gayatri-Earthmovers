@@ -17,8 +17,8 @@ export function BrandFilter({ currentBrand, onBrandSelect, availableBrands }: Br
         size="sm"
         onClick={() => onBrandSelect(null)}
         className={cn(
-          "rounded-full border-white/10 hover:border-primary hover:text-black font-medium transition-colors",
-          currentBrand === null ? "bg-primary text-black border-primary" : "bg-dark text-gray-400"
+          "rounded-full border-border hover:border-primary hover:text-primary-foreground font-medium transition-colors",
+          currentBrand === null ? "bg-primary text-primary-foreground border-primary" : "bg-card text-muted-foreground"
         )}
       >
         All Brands
@@ -31,8 +31,8 @@ export function BrandFilter({ currentBrand, onBrandSelect, availableBrands }: Br
           size="sm"
           onClick={() => onBrandSelect(brand)}
           className={cn(
-            "rounded-full border-white/10 hover:border-primary hover:text-black font-medium transition-colors",
-            currentBrand === brand ? "bg-primary text-black border-primary" : "bg-dark text-gray-400"
+            "rounded-full border-border hover:border-primary hover:text-primary-foreground font-medium transition-colors",
+            currentBrand === brand ? "bg-primary text-primary-foreground border-primary" : "bg-card text-muted-foreground"
           )}
         >
           {brand}

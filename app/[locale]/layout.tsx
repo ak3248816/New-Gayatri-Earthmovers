@@ -56,7 +56,7 @@ export default async function RootLayout({
 }>) {
   const messages = await getMessages();
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale}>
       <body
         className={cn(
           "min-h-screen bg-background text-foreground font-sans antialiased",

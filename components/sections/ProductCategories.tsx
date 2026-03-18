@@ -90,7 +90,7 @@ export function ProductCategories() {
   };
 
   return (
-    <section id="products" className="py-12 sm:py-16 md:py-20 bg-black">
+    <section id="products" className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div 
@@ -102,12 +102,12 @@ export function ProductCategories() {
         >
           <div className="inline-flex flex-col sm:flex-row items-center justify-center sm:space-x-2 mb-4">
             <div className="w-12 h-1 bg-primary rounded-full hidden sm:block"></div>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-foreground uppercase tracking-wide text-center">
               {t("heading")}
             </h2>
             <div className="w-12 h-1 bg-primary rounded-full mt-3 sm:mt-0"></div>
           </div>
-          <p className="text-gray-400 max-w-2xl mx-auto font-hindi text-base sm:text-lg px-2 sm:px-0">
+          <p className="text-muted-foreground max-w-2xl mx-auto font-hindi text-base sm:text-lg px-2 sm:px-0">
             उच्च गुणवत्ता वाले स्पेयर पार्ट्स हर तरह की अर्थमूविंग मशीनों के लिए
           </p>
         </motion.div>
@@ -130,20 +130,20 @@ export function ProductCategories() {
                 key={category.id}
                 variants={cardVariants}
                 whileHover={{ y: -5, borderColor: "var(--primary)" }}
-                className="group p-4 sm:p-6 rounded-2xl bg-dark-card border border-border hover:bg-dark transition-all duration-300 relative overflow-hidden flex flex-col items-start block cursor-pointer"
+                className="group p-4 sm:p-6 rounded-2xl bg-card border border-border hover:bg-secondary hover:shadow-md transition-all duration-300 relative overflow-hidden flex flex-col items-start block cursor-pointer"
               >
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 pointer-events-none" />
                 
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-black border border-white/5 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 group-hover:bg-primary/20 group-hover:border-primary/50 transition-all duration-300 text-primary">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-background border border-border flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 group-hover:bg-primary/20 group-hover:border-primary/50 text-foreground group-hover:text-primary-dark transition-all duration-300">
                   <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
                 
-                <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-2 group-hover:text-primary-dark transition-colors">
                   {category.title}
                 </h3>
                 
-                <p className="text-sm text-gray-400 font-medium">
+                <p className="text-sm text-muted-foreground font-medium">
                   {category.description}
                 </p>
                 

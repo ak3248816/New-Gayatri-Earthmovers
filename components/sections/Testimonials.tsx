@@ -52,10 +52,10 @@ export function Testimonials() {
   );
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-black border-t border-white/10 overflow-hidden relative">
+    <section className="py-12 sm:py-16 md:py-24 bg-card border-t border-border overflow-hidden relative">
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none mix-blend-multiply"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
@@ -66,11 +66,11 @@ export function Testimonials() {
           className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <div className="inline-flex justify-center mb-4">
-            <span className="bg-white/5 text-gray-300 border border-white/10 px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase font-heading">
+            <span className="bg-secondary text-muted-foreground border border-border px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase font-heading">
               Trusted Excellence
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-foreground uppercase tracking-wide">
             {t("heading")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full" />
@@ -96,8 +96,8 @@ export function Testimonials() {
             <CarouselContent className="-ml-4 sm:-ml-6">
               {testimonials.map((testimonial) => (
                 <CarouselItem key={testimonial.id} className="pl-4 sm:pl-6 basis-full md:basis-1/2 lg:basis-1/2">
-                  <div className="h-full bg-dark rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-primary/50 transition-colors relative group">
-                    <Quote className="absolute top-6 right-6 w-12 h-12 text-white/5 group-hover:text-primary/10 transition-colors" />
+                  <div className="h-full bg-background rounded-2xl p-6 sm:p-8 border border-border hover:shadow-lg hover:border-primary/50 transition-all relative group">
+                    <Quote className="absolute top-6 right-6 w-12 h-12 text-muted/20 group-hover:text-primary/10 transition-colors" />
                     
                     <div className="flex gap-1 mb-6">
                       {[1, 2, 3, 4, 5].map((star) => (
@@ -105,16 +105,16 @@ export function Testimonials() {
                       ))}
                     </div>
                     
-                    <p className="text-base sm:text-lg text-gray-300 italic mb-6 sm:mb-8 relative z-10 font-sans min-h-0 sm:min-h-[120px]">
+                    <p className="text-base sm:text-lg text-muted-foreground italic mb-6 sm:mb-8 relative z-10 font-sans min-h-0 sm:min-h-[120px]">
                       &quot;{testimonial.quote}&quot;
                     </p>
                     
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 border-t border-white/10 pt-4 sm:pt-6 mt-auto">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 border-t border-border pt-4 sm:pt-6 mt-auto">
                       <div>
-                        <h4 className="text-white font-heading font-bold text-lg">{testimonial.name}</h4>
-                        <p className="text-primary text-sm font-medium">{testimonial.role}</p>
+                        <h4 className="text-foreground font-heading font-bold text-lg">{testimonial.name}</h4>
+                        <p className="text-primary-dark text-sm font-medium">{testimonial.role}</p>
                       </div>
-                      <span className="text-xs text-black font-bold bg-white/90 px-3 py-1 rounded-full uppercase tracking-wider">
+                      <span className="text-xs text-secondary-foreground font-bold bg-secondary px-3 py-1 rounded-full uppercase tracking-wider border border-border">
                         {testimonial.machine}
                       </span>
                     </div>
@@ -123,8 +123,8 @@ export function Testimonials() {
               ))}
             </CarouselContent>
             <div className="hidden sm:block">
-              <CarouselPrevious className="bg-dark text-white border-white/20 hover:bg-primary hover:text-black hover:border-primary -left-12 h-12 w-12" />
-              <CarouselNext className="bg-dark text-white border-white/20 hover:bg-primary hover:text-black hover:border-primary -right-12 h-12 w-12" />
+              <CarouselPrevious className="bg-secondary text-foreground border-border hover:bg-primary hover:text-primary-foreground hover:border-primary -left-12 h-12 w-12" />
+              <CarouselNext className="bg-secondary text-foreground border-border hover:bg-primary hover:text-primary-foreground hover:border-primary -right-12 h-12 w-12" />
             </div>
           </Carousel>
         </motion.div>

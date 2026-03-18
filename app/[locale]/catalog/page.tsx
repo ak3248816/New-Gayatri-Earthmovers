@@ -69,18 +69,18 @@ function CatalogContent() {
   }, [parts, searchQuery, selectedBrand, selectedCategory]);
 
   return (
-    <div className="min-h-screen bg-black pt-32 pb-24">
+    <div className="min-h-screen bg-background pt-32 pb-24">
       {/* Decorative Header */}
-      <div className="absolute top-0 left-0 w-full h-[400px] bg-gradient-to-b from-primary/10 to-transparent pointer-events-none mix-blend-screen" />
+      <div className="absolute top-0 left-0 w-full h-[400px] bg-gradient-to-b from-primary/10 to-transparent pointer-events-none mix-blend-multiply" />
       
       <div className="container mx-auto px-4 relative z-10">
         
         {/* Header Block */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-hero font-heading font-bold text-white uppercase tracking-wide mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-hero font-heading font-bold text-foreground uppercase tracking-wide mb-6">
             Spare Parts <span className="text-primary text-balance text-center">Catalog</span>
           </h1>
-          <p className="text-lg text-gray-400 mb-8">
+          <p className="text-lg text-muted-foreground mb-8">
             Search our extensive inventory of genuine OEM and high-quality aftermarket parts for your earthmoving machinery.
           </p>
           
@@ -103,8 +103,8 @@ function CatalogContent() {
           <main className="w-full lg:w-3/4">
             
             {/* Top Bar for Brands */}
-            <div className="mb-8 p-6 bg-dark rounded-2xl border border-white/10">
-               <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-4 opacity-60">Filter by Brand</h3>
+            <div className="mb-8 p-6 bg-secondary/50 rounded-2xl border border-border">
+               <h3 className="text-foreground text-sm font-bold uppercase tracking-wider mb-4 opacity-80">Filter by Brand</h3>
                <BrandFilter 
                   currentBrand={selectedBrand} 
                   onBrandSelect={setSelectedBrand} 
@@ -112,7 +112,7 @@ function CatalogContent() {
                />
                
                {/* Results Count Summary */}
-               <div className="text-sm font-medium text-gray-400 mt-4 border-t border-white/10 pt-4 flex items-center justify-between">
+               <div className="text-sm font-medium text-muted-foreground mt-4 border-t border-border pt-4 flex items-center justify-between">
                  <span>Showing {filteredParts.length} parts</span>
                  {selectedCategory && (
                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold font-heading uppercase tracking-wider border border-primary/20">
@@ -139,15 +139,15 @@ function CatalogContent() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="flex flex-col items-center justify-center p-16 text-center bg-dark/50 rounded-3xl border border-white/5 border-dashed"
+                    className="flex flex-col items-center justify-center p-16 text-center bg-secondary/30 rounded-3xl border border-border border-dashed"
                   >
-                    <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mb-6 text-gray-600">
+                    <div className="w-20 h-20 bg-background rounded-full flex items-center justify-center mb-6 text-muted-foreground">
                       <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-heading font-bold text-white mb-2">No Parts Found</h3>
-                    <p className="text-gray-400 max-w-md">
+                    <h3 className="text-2xl font-heading font-bold text-foreground mb-2">No Parts Found</h3>
+                    <p className="text-muted-foreground max-w-md">
                       We couldn&apos;t find any parts matching your specific filters. Try adjusting your search criteria or changing categories.
                     </p>
                     <button 
@@ -156,7 +156,7 @@ function CatalogContent() {
                         setSelectedBrand(null);
                         setSelectedCategory(null);
                       }}
-                      className="mt-8 text-primary font-bold hover:text-white transition-colors underline underline-offset-4"
+                      className="mt-8 text-primary font-bold hover:text-primary-dark transition-colors underline underline-offset-4"
                     >
                       Clear All Filters
                     </button>
@@ -176,7 +176,7 @@ function CatalogContent() {
 export default function CatalogPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-black flex items-center justify-center pt-32 pb-24">
+      <div className="min-h-screen bg-background flex items-center justify-center pt-32 pb-24">
         <div className="w-16 h-16 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div>
       </div>
     }>

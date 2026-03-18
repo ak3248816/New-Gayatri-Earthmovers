@@ -70,9 +70,9 @@ export function StatsBar() {
   ];
 
   return (
-    <section className="bg-dark border-y border-primary/20 py-12 relative overflow-hidden">
+    <section className="bg-primary border-y border-primary-dark py-12 relative overflow-hidden">
       {/* Decorative gradient */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
       
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
@@ -85,16 +85,16 @@ export function StatsBar() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col items-center justify-center p-2 sm:p-4 rounded-2xl hover:bg-white/5 transition-colors group"
+                className="flex flex-col items-center justify-center p-2 sm:p-4 rounded-2xl hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
               >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 sm:mb-4 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-black transition-all duration-300">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/10 flex items-center justify-center mb-2 sm:mb-4 text-black group-hover:scale-110 group-hover:bg-black group-hover:text-primary transition-all duration-300">
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-1 sm:mb-2 flex items-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-black mb-1 sm:mb-2 flex items-center">
                   <Counter from={0} to={stat.value} duration={2.5} />
-                  <span className="text-primary">{stat.suffix}</span>
+                  <span className="text-black/70 ml-1">{stat.suffix}</span>
                 </div>
-                <p className="text-gray-400 font-medium text-sm md:text-base">
+                <p className="text-black/80 font-medium text-sm md:text-base">
                   {stat.label}
                 </p>
               </motion.div>
