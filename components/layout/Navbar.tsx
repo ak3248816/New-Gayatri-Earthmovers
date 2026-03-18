@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Menu, Phone } from "lucide-react";
 import {
   Sheet,
@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button";
 
 export function Navbar() {
   const t = useTranslations("Nav");
-  const locale = useLocale();
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   React.useEffect(() => {
@@ -32,12 +31,6 @@ export function Navbar() {
     { name: t("brands"), href: "/#brands" },
     { name: t("contact"), href: "/#contact" },
   ];
-
-  const switchLocale = () => {
-    const nextLocale = locale === "en" ? "hi" : "en";
-    document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000; SameSite=Lax`;
-    window.location.reload();
-  };
 
   return (
     <header
