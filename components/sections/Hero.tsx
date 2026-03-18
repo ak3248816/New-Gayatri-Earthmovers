@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+
 import { useTranslations } from "next-intl";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Search, MessageCircle, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -48,7 +48,7 @@ export function Hero() {
     <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center pt-20 pb-20 sm:pt-20 sm:pb-0 overflow-hidden bg-background text-foreground">
       {/* Background - Realistic Earthmoving Machine Images */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-end justify-center lg:block">
-        
+
         {/* Mobile Continuous Scrolling Marquee */}
         <div className="absolute inset-x-0 bottom-16 lg:hidden w-full overflow-hidden opacity-100 flex pointer-events-none">
           <div className="flex animate-hero-marquee w-max items-end">
@@ -101,7 +101,7 @@ export function Hero() {
           </motion.div>
 
           {/* Headline - Word by Word Stagger */}
-          <motion.h1 
+          <motion.h1
             className="text-3xl sm:text-5xl md:text-7xl lg:text-hero font-heading font-bold leading-tight mb-4 sm:mb-6 text-balance px-2 sm:px-0"
             variants={containerVariants}
           >
@@ -117,7 +117,7 @@ export function Hero() {
           </motion.h1>
 
           {/* Body */}
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mb-6 sm:mb-10 leading-relaxed px-2 sm:px-0"
           >
@@ -160,7 +160,8 @@ export function Hero() {
       </motion.div>
 
       {/* Required CSS for Hero Marquee */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes hero-marquee {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
