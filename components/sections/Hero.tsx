@@ -36,7 +36,7 @@ export function Hero() {
   const headlineWords = t("h1").split(" ");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 pb-16 sm:pt-20 sm:pb-0 overflow-hidden bg-black text-white">
+    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center pt-20 pb-20 sm:pt-20 sm:pb-0 overflow-hidden bg-black text-white">
       {/* Background - Realistic Earthmoving Machine Images */}
       <div className="absolute inset-0 z-0 pointer-events-none hidden sm:block">
         {/* Excavator - top left */}
@@ -122,7 +122,7 @@ export function Hero() {
         transition={{ delay: 1.5, duration: 0.6, ease: "easeOut" }}
         className="absolute bottom-0 left-0 w-full bg-primary/10 border-t border-primary/20 backdrop-blur-md"
       >
-        <div className="container mx-auto px-4 py-2 sm:py-3 flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-xs sm:text-sm md:text-base font-medium font-heading">
+        <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-3 flex flex-wrap justify-center items-center gap-1 sm:gap-4 text-[11px] sm:text-sm md:text-base font-medium font-heading">
           <PhoneCall className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
           <a href="tel:+919430192911" className="text-gray-300 hover:text-primary transition-colors">+91 9430192911</a>
           <span className="text-primary hidden sm:inline">|</span>

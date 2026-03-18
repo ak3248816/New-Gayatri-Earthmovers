@@ -16,7 +16,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-black pt-16 pb-8 border-t-[4px] border-primary relative overflow-hidden">
+    <footer className="bg-black pt-12 sm:pt-16 pb-24 sm:pb-8 border-t-[4px] border-primary relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 transform origin-top-right mix-blend-screen pointer-events-none"></div>
 
@@ -24,7 +24,7 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-16">
           
           {/* Brand Column */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
             <Link href="/" className="inline-block">
               <div className="font-heading font-bold text-2xl tracking-wider">
                 <span className="text-white">NEW GAYATRI</span>
@@ -37,7 +37,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links Column */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
             <h4 className="text-white font-heading font-bold text-lg uppercase tracking-wide">
               {t("quickLinks")}
             </h4>
@@ -58,7 +58,7 @@ export function Footer() {
           </div>
 
           {/* Categories Column */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
             <h4 className="text-white font-heading font-bold text-lg uppercase tracking-wide">
               {t("categories")}
             </h4>
@@ -79,7 +79,7 @@ export function Footer() {
           </div>
 
           {/* Contact Column */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
             <h4 className="text-white font-heading font-bold text-lg uppercase tracking-wide">
               {t("contact")}
             </h4>
@@ -97,9 +97,9 @@ export function Footer() {
                   ak3248816@gmail.com
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-400 font-medium">
-                <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Near Asnabad Petrol Pump,<br/>Jhumri Telaiya, Koderma,<br/>Jharkhand</span>
+              <li className="flex items-start justify-center sm:justify-start gap-3 text-sm text-gray-400 font-medium w-full">
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <span className="text-left w-full sm:w-auto">Near Asnabad Petrol Pump,<br/>Jhumri Telaiya, Koderma,<br/>Jharkhand</span>
               </li>
             </ul>
           </div>

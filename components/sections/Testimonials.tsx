@@ -52,7 +52,7 @@ export function Testimonials() {
   );
 
   return (
-    <section className="py-24 bg-black border-t border-white/10 overflow-hidden relative">
+    <section className="py-12 sm:py-16 md:py-24 bg-black border-t border-white/10 overflow-hidden relative">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
@@ -63,7 +63,7 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <div className="inline-flex justify-center mb-4">
             <span className="bg-white/5 text-gray-300 border border-white/10 px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase font-heading">
@@ -95,7 +95,7 @@ export function Testimonials() {
           >
             <CarouselContent className="-ml-4 sm:-ml-6">
               {testimonials.map((testimonial) => (
-                <CarouselItem key={testimonial.id} className="pl-4 sm:pl-6 md:basis-1/2 lg:basis-1/2">
+                <CarouselItem key={testimonial.id} className="pl-4 sm:pl-6 basis-full md:basis-1/2 lg:basis-1/2">
                   <div className="h-full bg-dark rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-primary/50 transition-colors relative group">
                     <Quote className="absolute top-6 right-6 w-12 h-12 text-white/5 group-hover:text-primary/10 transition-colors" />
                     

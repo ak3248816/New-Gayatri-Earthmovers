@@ -20,7 +20,7 @@ export function AboutUs() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-black relative overflow-hidden">
+    <section id="about" className="py-12 sm:py-16 md:py-24 bg-black relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform origin-top-right"></div>
       
@@ -43,13 +43,13 @@ export function AboutUs() {
             </div>
             
             <div className="prose prose-lg prose-invert text-gray-400 font-sans space-y-6">
-              <p className="leading-relaxed text-lg">
+              <p className="leading-relaxed text-base sm:text-lg">
                 {t("p1")}
               </p>
-              <p className="leading-relaxed text-lg shadow-sm border-l-4 border-primary pl-4 py-2 bg-white/5 rounded-r-lg">
+              <p className="leading-relaxed text-base sm:text-lg shadow-sm border-l-4 border-primary pl-4 py-2 bg-white/5 rounded-r-lg">
                 {t("p2")}
               </p>
-              <p className="leading-relaxed text-lg">
+              <p className="leading-relaxed text-base sm:text-lg">
                 {t("p3")}
               </p>
             </div>
@@ -88,14 +88,14 @@ export function AboutUs() {
                 <circle cx="50" cy="50" r="10" fill="currentColor" />
               </svg>
 
-              <div className="absolute bottom-8 left-8 right-8 bg-black/80 backdrop-blur-md border border-white/10 p-6 rounded-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-black font-heading font-bold text-2xl shrink-0">
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 bg-black/80 backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary flex items-center justify-center text-black font-heading font-bold text-xl sm:text-2xl shrink-0">
                     21+
                   </div>
                   <div>
-                    <h3 className="text-white font-heading font-bold text-xl uppercase">Years of Trust</h3>
-                    <p className="text-gray-400 text-sm">Delivering quality parts since establishment.</p>
+                    <h3 className="text-white font-heading font-bold text-lg sm:text-xl uppercase">Years of Trust</h3>
+                    <p className="text-gray-400 text-xs sm:text-sm">Delivering quality parts since establishment.</p>
                   </div>
                 </div>
               </div>

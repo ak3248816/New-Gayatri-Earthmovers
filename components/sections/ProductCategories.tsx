@@ -90,7 +90,7 @@ export function ProductCategories() {
   };
 
   return (
-    <section id="products" className="py-20 bg-black">
+    <section id="products" className="py-12 sm:py-16 md:py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div 
@@ -98,7 +98,7 @@ export function ProductCategories() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
           <div className="inline-flex flex-col sm:flex-row items-center justify-center sm:space-x-2 mb-4">
             <div className="w-12 h-1 bg-primary rounded-full hidden sm:block"></div>

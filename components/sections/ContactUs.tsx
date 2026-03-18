@@ -64,13 +64,13 @@ export function ContactUs() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-dark-card border-t border-border relative">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-dark-card border-t border-border relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-wide">
             {t("heading")}
@@ -85,7 +85,7 @@ export function ContactUs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-black p-6 sm:p-8 md:p-10 rounded-3xl border border-white/5 shadow-xl relative overflow-hidden"
+            className="bg-black p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-white/5 shadow-xl relative overflow-hidden"
           >
             {/* Decorative corner */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -z-0"></div>
@@ -247,7 +247,7 @@ export function ContactUs() {
             </div>
 
             {/* Map Placeholder */}
-            <div className="w-full h-48 sm:h-48 md:h-64 rounded-3xl overflow-hidden border border-white/10 relative group">
+            <div className="w-full h-40 sm:h-48 md:h-64 rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 relative group mt-4 sm:mt-0">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14620.32356877227!2d85.51357062402244!3d24.45030272023594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f60cb0c0000001%3A0x6bba3bc30a91e0a2!2sAsnabad%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1715421234567!5m2!1sen!2sin"
                 width="100%"

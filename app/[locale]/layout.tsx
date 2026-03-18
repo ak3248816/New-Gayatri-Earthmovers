@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Rajdhani, DM_Sans, Noto_Sans_Devanagari } from "next/font/google";
 import "../globals.css";
 import { cn } from "@/lib/utils";
@@ -25,6 +25,13 @@ const notoSans = Noto_Sans_Devanagari({
   weight: ["400", "500", "700"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: "New Gayatri Earthmovers | Earthmoving Spare Parts Dealer",

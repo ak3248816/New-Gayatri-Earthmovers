@@ -29,7 +29,7 @@ export function BrandsSection() {
   };
 
   return (
-    <section id="brands" className="py-20 bg-dark border-t border-border overflow-hidden">
+    <section id="brands" className="py-12 sm:py-16 md:py-20 bg-dark border-t border-border overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -88,9 +88,9 @@ export function BrandsSection() {
             {brands.map((brand, index) => (
               <div 
                 key={brand.name + index + 'm1'}
-                className="bg-white rounded-xl px-8 py-6 mx-2 min-w-[200px] flex items-center justify-center border-2 border-transparent transition-all duration-300 hover:border-primary filter grayscale hover:grayscale-0"
+                className="bg-white rounded-xl px-5 py-4 mx-1.5 min-w-[140px] flex items-center justify-center border-2 border-transparent transition-all duration-300 hover:border-primary filter grayscale hover:grayscale-0"
               >
-                <h3 className="text-2xl font-heading font-bold text-gray-500 hover:text-black">
+                <h3 className="text-lg font-heading font-bold text-gray-500 hover:text-black">
                   {brand.name}
                 </h3>
               </div>
@@ -99,9 +99,9 @@ export function BrandsSection() {
             {brands.map((brand, index) => (
               <div 
                 key={brand.name + index + 'm2'}
-                className="bg-white rounded-xl px-8 py-6 mx-2 min-w-[200px] flex items-center justify-center border-2 border-transparent transition-all duration-300 hover:border-primary filter grayscale hover:grayscale-0"
+                className="bg-white rounded-xl px-5 py-4 mx-1.5 min-w-[140px] flex items-center justify-center border-2 border-transparent transition-all duration-300 hover:border-primary filter grayscale hover:grayscale-0"
               >
-                <h3 className="text-2xl font-heading font-bold text-gray-500 hover:text-black">
+                <h3 className="text-lg font-heading font-bold text-gray-500 hover:text-black">
                   {brand.name}
                 </h3>
               </div>

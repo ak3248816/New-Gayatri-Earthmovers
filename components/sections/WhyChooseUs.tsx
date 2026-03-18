@@ -70,7 +70,7 @@ export function WhyChooseUs() {
   };
 
   return (
-    <section id="why-us" className="py-24 bg-dark relative border-t border-white/5">
+    <section id="why-us" className="py-12 sm:py-16 md:py-24 bg-dark relative border-t border-white/5">
       {/* Subtle Glow Overlay */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
 
@@ -80,7 +80,7 @@ export function WhyChooseUs() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <div className="inline-flex justify-center mb-4">
             <span className="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase font-heading">

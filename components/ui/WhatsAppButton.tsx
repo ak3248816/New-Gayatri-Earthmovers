@@ -24,7 +24,7 @@ export function WhatsAppButton() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.5, y: 50 }}
           transition={{ type: "spring", stiffness: 260, damping: 20 }}
-          className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2"
+          className="fixed bottom-20 md:bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end gap-2"
         >
           {/* Tooltip */}
           <div className="bg-white text-black text-xs font-bold py-1.5 px-3 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block border border-gray-200">
