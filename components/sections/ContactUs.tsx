@@ -61,7 +61,7 @@ export function ContactUs() {
         .filter(Boolean)
         .join("\n");
 
-      const waUrl = `https://wa.me/919430192911?text=${encodeURIComponent(waText)}`;
+      const waUrl = `https://wa.me/916290049389?text=${encodeURIComponent(waText)}`;
       window.open(waUrl, "_blank", "noopener,noreferrer");
 
       toast({
