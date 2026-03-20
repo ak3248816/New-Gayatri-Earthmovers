@@ -4,6 +4,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { MessageCircle, PhoneCall } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -54,13 +55,13 @@ export function Hero() {
             {/* First Set */}
             {machines.map((src, i) => (
               <div key={i + 'hero1'} className="h-[130px] sm:h-[160px] flex-shrink-0 mx-3 sm:mx-6 flex items-end justify-center">
-                <img src={src} className="h-full w-auto object-contain drop-shadow-2xl" alt="" />
+                <Image src={src} width={240} height={160} className="h-full w-auto object-contain drop-shadow-2xl" alt="" />
               </div>
             ))}
             {/* Duplicate Set for Seamless Loop */}
             {machines.map((src, i) => (
               <div key={i + 'hero2'} className="h-[130px] sm:h-[160px] flex-shrink-0 mx-3 sm:mx-6 flex items-end justify-center">
-                <img src={src} className="h-full w-auto object-contain drop-shadow-2xl" alt="" />
+                <Image src={src} width={240} height={160} className="h-full w-auto object-contain drop-shadow-2xl" alt="" />
               </div>
             ))}
           </div>
@@ -69,19 +70,19 @@ export function Hero() {
         {/* Desktop Fixed Corners */}
         {/* Excavator - top left */}
         <div className="hidden lg:block absolute top-[3%] left-[1%] w-[25%] max-w-[320px]">
-          <img src="/machines/excavator-trans.png" alt="" className="w-full h-auto" loading="eager" />
+          <Image src="/machines/excavator-trans.png" alt="" width={320} height={240} className="w-full h-auto" priority />
         </div>
         {/* JCB 3DX - top right */}
         <div className="hidden lg:block absolute top-[3%] right-[1%] w-[25%] max-w-[320px]">
-          <img src="/machines/jcb-3dx-trans.png" alt="" className="w-full h-auto" loading="eager" />
+          <Image src="/machines/jcb-3dx-trans.png" alt="" width={320} height={240} className="w-full h-auto" priority />
         </div>
         {/* Bulldozer - bottom left */}
         <div className="hidden lg:block absolute bottom-[8%] left-[1%] w-[25%] max-w-[320px]">
-          <img src="/machines/bulldozer-trans.png" alt="" className="w-full h-auto" loading="eager" />
+          <Image src="/machines/bulldozer-trans.png" alt="" width={320} height={240} className="w-full h-auto" priority />
         </div>
         {/* Wheel Loader - bottom right */}
         <div className="hidden lg:block absolute bottom-[8%] right-[1%] w-[25%] max-w-[320px]">
-          <img src="/machines/wheel-loader-trans.png" alt="" className="w-full h-auto" loading="eager" />
+          <Image src="/machines/wheel-loader-trans.png" alt="" width={320} height={240} className="w-full h-auto" priority />
         </div>
       </div>
 
