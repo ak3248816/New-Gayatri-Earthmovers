@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
 export function Navbar() {
   const t = useTranslations("Nav");
@@ -87,6 +88,8 @@ export function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-2 sm:gap-4">
+          <LanguageSwitcher />
+
           <Button asChild className="hidden sm:flex bg-primary text-primary-foreground hover:bg-primary-dark font-bold font-heading">
             <a href="tel:+919430192911">
               <Phone className="w-4 h-4 mr-2" />

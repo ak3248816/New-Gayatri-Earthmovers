@@ -235,7 +235,7 @@ export function ContactUs() {
                   <h4 className="text-foreground font-heading font-bold text-xl mb-2">WhatsApp Support</h4>
                   <p className="text-muted-foreground font-medium mb-3">Fast responses for parts availability</p>
                   <Button asChild variant="outline" className="border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white rounded-full h-10 px-6">
-                    <a href="https://wa.me/919430192911?text=Hello%2C%20I%20am%20interested%20in%20spare%20parts." target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/916290049389?text=Hello%2C%20I%20am%20interested%20in%20spare%20parts." target="_blank" rel="noopener noreferrer">
                       Chat Now
                     </a>
                   </Button>
