@@ -1,8 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Wrench, Package, ShieldCheck } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Wrench, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 export interface Part {
   id: string;
@@ -19,72 +18,35 @@ interface PartCardProps {
 }
 
 export function PartCard({ part }: PartCardProps) {
-  const handleInquire = () => {
-    const text = `Hello, I need ${part.name} (Part No: ${part.partNumber}) for my machine.`;
-    const url = `https://wa.me/919430192911?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -4, borderColor: "#F5C400" }}
-      className="bg-card rounded-2xl border border-border overflow-hidden group flex flex-col h-full transition-all duration-300 relative shadow-sm"
+    <Link
+      href={`/en/catalog/${part.id}`}
+      className="group relative bg-background p-6 hover:shadow-2xl hover:shadow-foreground/5 transition-all duration-300 rounded-2xl border border-border flex flex-col h-full cursor-pointer"
     >
-      {/* Type badge (OEM / Aftermarket) */}
-      <div className="absolute top-4 right-4 z-10">
-        <span className={`text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${
-          part.type === 'OEM' ? 'bg-primary/20 text-primary-dark border border-primary/30' : 'bg-secondary text-muted-foreground border border-border'
-        }`}>
-          {part.type}
-        </span>
+      <div className="aspect-square bg-muted mb-6 overflow-hidden rounded-xl bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
+        {/* Placeholder image from HTML, ideally it would be dynamic if `part.image` exists */}
+        <Wrench className="w-16 h-16 text-muted-foreground/30 group-hover:text-primary transition-colors group-hover:scale-110 duration-500" />
       </div>
-
-      <div className="p-6 flex-grow flex flex-col">
-        {/* Placeholder Image/Icon */}
-        <div className="w-full h-40 bg-secondary/50 rounded-xl border border-border mb-6 flex items-center justify-center group-hover:bg-secondary transition-colors">
-          <Wrench className="w-12 h-12 text-muted-foreground/30 group-hover:text-primary transition-colors" />
+      <div className="space-y-2 flex flex-col flex-grow">
+        <div className="flex justify-between items-start">
+          <span className="px-2 py-0.5 bg-muted text-[10px] font-bold tracking-tighter rounded-full uppercase text-foreground">
+            {part.category}
+          </span>
+          <ShieldCheck className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
         </div>
-
-        {/* Content */}
-        <div className="mb-2">
-          <span className="text-xs text-muted-foreground font-bold uppercase tracking-wider">{part.category}</span>
-        </div>
-        
-        <h3 className="text-xl font-heading font-bold text-foreground mb-1 group-hover:text-primary-dark transition-colors line-clamp-2">
+        <h3 className="text-xl font-bold text-foreground leading-tight line-clamp-2">
           {part.name}
         </h3>
-        
-        <div className="flex items-center gap-2 mb-4">
-          <Package className="w-4 h-4 text-muted-foreground" />
-          <span className="text-sm font-mono text-muted-foreground font-medium bg-secondary px-2 py-0.5 rounded border border-border">
-            Part #: {part.partNumber}
-          </span>
-        </div>
-        
-        <p className="text-sm text-muted-foreground mb-6 line-clamp-2 flex-grow">
-          {part.description}
+        <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest flex-grow">
+          PN: {part.partNumber}
         </p>
-
-        {/* Brands Tags */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {part.brands.map(brand => (
-            <span key={brand} className="text-xs bg-secondary text-muted-foreground border border-border px-2.5 py-1 rounded-full whitespace-nowrap">
-              {brand}
-            </span>
-          ))}
+        <div className="pt-4 flex items-center justify-between mt-auto">
+          <span className="text-lg font-bold text-primary">View Details</span>
+          <div className="w-10 h-10 flex items-center justify-center bg-muted/50 group-hover:bg-primary/20 text-foreground group-hover:text-primary transition-colors rounded-lg">
+            <span className="text-xl leading-none">›</span>
+          </div>
         </div>
-        
-        {/* CTA */}
-        <Button 
-          onClick={handleInquire}
-          className="w-full bg-secondary hover:bg-primary text-foreground hover:text-primary-foreground font-heading font-bold transition-all duration-300 border border-border hover:border-primary mt-auto"
-        >
-          <ShieldCheck className="w-4 h-4 mr-2" />
-          Inquire on WhatsApp
-        </Button>
       </div>
-    </motion.div>
+    </Link>
   );
 }

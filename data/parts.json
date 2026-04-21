@@ -1,27 +1,74 @@
 [
-  { "id": "1", "name": "Hydraulic Main Pump", "partNumber": "20/925586", "category": "Hydraulic Parts", "brands": ["JCB"], "description": "High-pressure hydraulic pump for JCB 3CX/3DX", "type": "OEM" },
-  { "id": "2", "name": "Engine Piston Ring Set", "partNumber": "320/09214", "category": "Engine Parts", "brands": ["JCB", "CAT"], "description": "Standard size piston rings for JCB Dieselmax", "type": "Aftermarket" },
-  { "id": "3", "name": "Track Roller", "partNumber": "185-3507", "category": "Undercarriage Parts", "brands": ["CAT", "Komatsu"], "description": "Heavy-duty track roller for medium excavators", "type": "OEM" },
-  { "id": "4", "name": "Air Filter Element", "partNumber": "32/925682", "category": "Filters & Consumables", "brands": ["JCB", "CAT", "Volvo"], "description": "Primary air filter element", "type": "OEM" },
-  { "id": "5", "name": "Heavy Duty Starter Motor", "partNumber": "714/40159", "category": "Electrical Parts", "brands": ["JCB", "L&T Case"], "description": "24V 4.5kW starter motor assembly", "type": "OEM" },
-  { "id": "6", "name": "Bucket Teeth", "partNumber": "531/03205", "category": "Body & Structural", "brands": ["JCB", "Komatsu", "Hitachi"], "description": "Standard sharp edge bucket tooth", "type": "Aftermarket" },
-  { "id": "7", "name": "Transmission Gearbox", "partNumber": "445/03001", "category": "Transmission Parts", "brands": ["JCB"], "description": "4-speed synchro shuttle gearbox", "type": "OEM" },
-  { "id": "8", "name": "Radiator Assembly", "partNumber": "30/925528", "category": "Cooling System", "brands": ["JCB", "BEML"], "description": "Aluminum core radiator assembly", "type": "Aftermarket" },
-  { "id": "9", "name": "Hydraulic Cylinder Seal Kit", "partNumber": "991/00145", "category": "Hydraulic Parts", "brands": ["CAT", "Volvo"], "description": "Boom cylinder seal replacement kit", "type": "OEM" },
-  { "id": "10", "name": "Main Engine Bearing", "partNumber": "320/09205", "category": "Engine Parts", "brands": ["JCB", "Hitachi"], "description": "Standard main bearing set", "type": "OEM" },
-  { "id": "11", "name": "Drive Sprocket", "partNumber": "100-2451", "category": "Undercarriage Parts", "brands": ["CAT", "Komatsu"], "description": "21-tooth final drive sprocket", "type": "Aftermarket" },
-  { "id": "12", "name": "Hydraulic Oil Filter", "partNumber": "32/925346", "category": "Filters & Consumables", "brands": ["JCB", "Komatsu"], "description": "Spin-on return line filter", "type": "OEM" },
-  { "id": "13", "name": "Alternator 12V", "partNumber": "714/32000", "category": "Electrical Parts", "brands": ["JCB", "BEML"], "description": "12V 65A internal fan alternator", "type": "Aftermarket" },
-  { "id": "14", "name": "Side Cutter", "partNumber": "332/C4388", "category": "Body & Structural", "brands": ["JCB", "L&T Case"], "description": "Bolt-on side cutter plate", "type": "OEM" },
-  { "id": "15", "name": "Drive Shaft Assembly", "partNumber": "914/60255", "category": "Transmission Parts", "brands": ["CAT", "Volvo"], "description": "Front axle drive shaft", "type": "OEM" },
-  { "id": "16", "name": "Water Pump", "partNumber": "320/04542", "category": "Cooling System", "brands": ["JCB", "CAT"], "description": "Engine coolant pump with pulley", "type": "Aftermarket" },
-  { "id": "17", "name": "Pilot Valve", "partNumber": "25/221054", "category": "Hydraulic Parts", "brands": ["Komatsu", "Hitachi"], "description": "Joystick control pilot valve", "type": "OEM" },
-  { "id": "18", "name": "Cylinder Head Gasket", "partNumber": "320/06047", "category": "Engine Parts", "brands": ["JCB", "L&T Case"], "description": "Multi-layer steel head gasket", "type": "OEM" },
-  { "id": "19", "name": "Front Idler Assembly", "partNumber": "100-5020", "category": "Undercarriage Parts", "brands": ["CAT", "Volvo"], "description": "Complete front idler with bracket", "type": "Aftermarket" },
-  { "id": "20", "name": "Fuel Filter Water Separator", "partNumber": "32/925694", "category": "Filters & Consumables", "brands": ["JCB", "CAT", "Komatsu"], "description": "Primary fuel filter with bowl", "type": "OEM" },
-  { "id": "21", "name": "Instrument Cluster", "partNumber": "704/D7231", "category": "Electrical Parts", "brands": ["JCB"], "description": "Digital display dashboard console", "type": "OEM" },
-  { "id": "22", "name": "Cutting Edge Reversible", "partNumber": "993/99542", "category": "Body & Structural", "brands": ["CAT", "BEML"], "description": "16mm bolt-on reversible cutting edge", "type": "Aftermarket" },
-  { "id": "23", "name": "Clutch Friction Plate", "partNumber": "331/16520", "category": "Transmission Parts", "brands": ["JCB", "Hitachi"], "description": "Sintered bronze friction disc", "type": "OEM" },
-  { "id": "24", "name": "Thermostat", "partNumber": "320/04588", "category": "Cooling System", "brands": ["JCB", "Volvo"], "description": "82C degree engine thermostat", "type": "OEM" },
-  { "id": "25", "name": "Relief Valve", "partNumber": "25/618901", "category": "Hydraulic Parts", "brands": ["CAT", "Komatsu", "Hitachi"], "description": "Main hydraulic system relief valve", "type": "Aftermarket" }
+  {
+    "id": "1",
+    "name": "Hydraulic Main Pump",
+    "partNumber": "20/925586",
+    "category": "Hydraulic Parts",
+    "brands": ["JCB", "CAT"],
+    "description": "High-pressure hydraulic pump for JCB 3CX/3DX and CAT 428F. Engineered for maximum lift capacity.",
+    "type": "OEM"
+  },
+  {
+    "id": "2",
+    "name": "Engine Piston Ring Set",
+    "partNumber": "320/09214",
+    "category": "Engine Parts",
+    "brands": ["JCB", "CAT"],
+    "description": "Standard size piston rings for Dieselmax engines. High thermal resistance.",
+    "type": "Aftermarket"
+  },
+  {
+    "id": "3",
+    "name": "Heavy Duty Track Roller",
+    "partNumber": "185-3507",
+    "category": "Undercarriage Parts",
+    "brands": ["CAT", "Komatsu", "Volvo"],
+    "description": "Heavy-duty track roller for medium excavators. Forged steel construction.",
+    "type": "OEM"
+  },
+  {
+    "id": "4",
+    "name": "Primary Air Filter Element",
+    "partNumber": "32/925682",
+    "category": "Filters & Consumables",
+    "brands": ["JCB", "CAT", "Volvo", "Sany"],
+    "description": "High-capacity primary air filter element for dusty mining conditions.",
+    "type": "OEM"
+  },
+  {
+    "id": "5",
+    "name": "Heavy Duty Starter Motor",
+    "partNumber": "714/40159",
+    "category": "Electrical Parts",
+    "brands": ["JCB", "Komatsu"],
+    "description": "24V 4.5kW starter motor assembly. Anti-corrosion coating applied.",
+    "type": "OEM"
+  },
+  {
+    "id": "6",
+    "name": "Standard Bucket Teeth",
+    "partNumber": "531/03205",
+    "category": "Ground Tools",
+    "brands": ["JCB", "Komatsu", "Sany"],
+    "description": "Standard sharp edge bucket tooth made of high tensile strength alloy.",
+    "type": "Aftermarket"
+  },
+  {
+    "id": "7",
+    "name": "Transmission Synchro Gearbox",
+    "partNumber": "445/03001",
+    "category": "Transmission Parts",
+    "brands": ["JCB"],
+    "description": "4-speed synchro shuttle gearbox. Fully tested and certified.",
+    "type": "OEM"
+  },
+  {
+    "id": "8",
+    "name": "High Pressure Relief Valve",
+    "partNumber": "25/618901",
+    "category": "Hydraulic Parts",
+    "brands": ["CAT", "Volvo"],
+    "description": "Main hydraulic system relief valve. Pre-calibrated for heavy lifting.",
+    "type": "Aftermarket"
+  }
 ]
