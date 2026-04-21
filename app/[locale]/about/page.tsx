@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Toaster } from "@/components/ui/toaster";
 import { MoveRight, BadgeCheck, Headset, Truck, Handshake } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -13,10 +14,12 @@ export default function AboutPage() {
         <section className="relative h-[819px] flex items-center bg-background overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
-            <img 
-              alt="Industrial Machinery" 
-              className="w-full h-full object-cover" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbZ74ws-bZu8n1cgzoHDC1AXh0qiRGE5Nejyy-tJHiG_2akI4zwmE22_i_mKrkA0cO49Uqvr-Dt9aJxwlTWzKzqfAlJhwnRX2U_g2-n3ING_WueIZmYxup8S8G4F57b5hzubB8RG5vrb4CE6Bg87EJvTG1PzOaJf-tEAilZyAOlYn5ETV8jDVzqNU5Udh4BRvMecFcVDqZmYm65xjr0TngtxDC2xgGprxb7gy3YGmX0xDLJedQ9-5vfoIb-ACdwuOyl-27Ln83CmaF" 
+            <Image
+              alt="Industrial Machinery"
+              className="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbZ74ws-bZu8n1cgzoHDC1AXh0qiRGE5Nejyy-tJHiG_2akI4zwmE22_i_mKrkA0cO49Uqvr-Dt9aJxwlTWzKzqfAlJhwnRX2U_g2-n3ING_WueIZmYxup8S8G4F57b5hzubB8RG5vrb4CE6Bg87EJvTG1PzOaJf-tEAilZyAOlYn5ETV8jDVzqNU5Udh4BRvMecFcVDqZmYm65xjr0TngtxDC2xgGprxb7gy3YGmX0xDLJedQ9-5vfoIb-ACdwuOyl-27Ln83CmaF"
+              fill
+              unoptimized
             />
           </div>
           <div className="relative z-20 px-12 max-w-5xl">
@@ -71,10 +74,12 @@ export default function AboutPage() {
             </div>
             <div className="w-full md:w-1/2 space-y-16">
               <div className="group relative overflow-hidden bg-muted aspect-[4/5] rounded-3xl">
-                <img 
-                  alt="Industrial Workshop" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuARr4oNZHz3U4AzPsZFnsxc3mWeiZ5mr6YV6L9q-l26WqeREoeYtNYjHyb2962FCy-pWx096wEghvizwXPGTKf8cX5410MBFos1Zwv3jGYAtNmbXR9ECeKJH-F8o3N58rw0G17d6zJSReJAbNpAGUKcsvlQAFYZ8W_1rN9oZdPQ2M5anXK6aQYmhGnxiGRD6Pyb4D6WLVSlvstjeFYz8KfA3orKJGiQdngptvcWnkiGNRN9Qu4LyNojUiaklBKzoH2nHKLsc3WwSUPI" 
+                <Image
+                  alt="Industrial Workshop"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuARr4oNZHz3U4AzPsZFnsxc3mWeiZ5mr6YV6L9q-l26WqeREoeYtNYjHyb2962FCy-pWx096wEghvizwXPGTKf8cX5410MBFos1Zwv3jGYAtNmbXR9ECeKJH-F8o3N58rw0G17d6zJSReJAbNpAGUKcsvlQAFYZ8W_1rN9oZdPQ2M5anXK6aQYmhGnxiGRD6Pyb4D6WLVSlvstjeFYz8KfA3orKJGiQdngptvcWnkiGNRN9Qu4LyNojUiaklBKzoH2nHKLsc3WwSUPI"
+                  fill
+                  unoptimized
                 />
                 <div className="absolute bottom-0 left-0 p-8 bg-background/90 backdrop-blur-md w-3/4 rounded-tr-3xl">
                   <p className="text-xs font-bold text-primary uppercase mb-2 tracking-widest">Quality Assurance</p>

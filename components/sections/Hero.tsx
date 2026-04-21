@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { MessageCircle, PhoneCall } from "lucide-react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function Hero() {

@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Toaster } from "@/components/ui/toaster";
 import { MapPin, Phone, Mail, MoveRight } from "lucide-react";
+import Image from "next/image";
 
 export default function ContactPage() {
   return (
@@ -12,10 +13,12 @@ export default function ContactPage() {
         {/* Hero Section */}
         <section className="relative h-[409px] min-h-[400px] flex items-center overflow-hidden bg-zinc-900">
           <div className="absolute inset-0 opacity-40">
-            <img 
-              alt="Heavy industrial machinery in a construction yard" 
-              className="w-full h-full object-cover" 
+            <Image
+              alt="Heavy industrial machinery in a construction yard"
+              className="w-full h-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_TG1iOEwSh0T4ZHXVijWDiodToxhXAomXIhGDxsjoWTjuIFFMCqgQrkR-dUUwHBY5sf-kKWTa1sGtgbWk-oyqEKZ4jyB1dCXV4evYriBXzwbiI-5rjhOmn3EPtfnqFXHH79Hv2ctcWkX0GriR3TA3WAFS4M6kL4wZDgIuIn8eMeNsbDZUyFLWc0i54gzBFUBQT-lMFL2508r7QoDafPZvl5bYurCkC0UZvZxp9mvGxBrSYWZX2n8GXjqbm3Fgzq1YI8sjse21jmf6"
+              fill
+              unoptimized
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 via-zinc-900/60 to-transparent"></div>
@@ -85,10 +88,12 @@ export default function ContactPage() {
               
               {/* Map Placeholder */}
               <div className="relative overflow-hidden rounded-xl bg-muted h-64 border border-border">
-                <img 
-                  alt="Map location" 
-                  className="w-full h-full object-cover opacity-50 grayscale contrast-125" 
+                <Image
+                  alt="Map location"
+                  className="w-full h-full object-cover opacity-50 grayscale contrast-125"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmrFDhmMDrdiRetgUemzrWsFmBisQj3NQSCqx4KZXjKjEEhy0-Xok0oboq1dvTgkcu5wgZy_0SpVzUAm6CzeoKhm1xnWXWRGITyWPktCeMim8tVfviedZAdQ76-HK6bY-7AlLWoEl_dPJ4wh2-1Vwo2YISPXkfMwcVtig_5NfWsQ4w7dB8-37xwjktzdTVc0Gbu8zhc8nYEHv7Kl68gldNgHEPXuscz_HK8zSA7DISsz3BC7D7xyuokP3rrTOhcNusF0IdeP3YZnXZ"
+                  fill
+                  unoptimized
                 />
                 <a href="https://maps.google.com/?q=New+Gayatri+Earthmovers" target="_blank" rel="noopener noreferrer" className="absolute inset-0 flex items-center justify-center cursor-pointer">
                   <div className="bg-background/90 backdrop-blur px-6 py-4 shadow-xl flex items-center space-x-4 border border-border rounded-lg hover:scale-105 transition-transform">
